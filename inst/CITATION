@@ -1,0 +1,7 @@
+bibentry(bibtype = "misc",
+         title = "The chopthin algorithm for resampling",
+         author = c(person("Axel", "Gandy"),
+                    person("F Din-Houn", "Lau")),
+         year = 2015,
+         note = "arXiv:1502.07532 [stat.CO]")
+

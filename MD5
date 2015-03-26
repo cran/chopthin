@@ -1,0 +1,11 @@
+ba646c297cce06622a7f573a1afb431a *DESCRIPTION
+b081ef5056d218905d554a75fe17b01a *NAMESPACE
+d96d995b221de442be819962f3aa2992 *R/RcppExports.R
+f60dda8ac5189e4cf461cc8ed58b928e *R/chopthin.R
+f729d0e2bf7bdda19497f4ee27628f0c *inst/CITATION
+5c187230e67e07d661ceef58039687ad *man/chopthin.Rd
+c2882410a6d2367831aa3f1a56ce589a *src/RcppExports.cpp
+7e488e3536ff9016129c4dbfe2316535 *src/chopthin.cpp
+1a68d8266f75c8c7ded21c9833430a36 *src/chopthin_internal.h
+090d1b910055ff25fbcba7331fbe3b36 *tests/testthat.R
+78e8eb229b013c9cd1c75afda1062589 *tests/testthat/test-chopthin_exact.R
