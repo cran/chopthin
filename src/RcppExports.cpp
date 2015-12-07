@@ -6,15 +6,17 @@
 using namespace Rcpp;
 
 // chopthin
-List chopthin(std::vector<double>& w, int N, double eta);
-RcppExport SEXP chopthin_chopthin(SEXP wSEXP, SEXP NSEXP, SEXP etaSEXP) {
+List chopthin(std::vector<double>& w, int N, double eta, bool normalise, bool checks);
+RcppExport SEXP chopthin_chopthin(SEXP wSEXP, SEXP NSEXP, SEXP etaSEXP, SEXP normaliseSEXP, SEXP checksSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< std::vector<double>& >::type w(wSEXP);
     Rcpp::traits::input_parameter< int >::type N(NSEXP);
     Rcpp::traits::input_parameter< double >::type eta(etaSEXP);
-    __result = Rcpp::wrap(chopthin(w, N, eta));
+    Rcpp::traits::input_parameter< bool >::type normalise(normaliseSEXP);
+    Rcpp::traits::input_parameter< bool >::type checks(checksSEXP);
+    __result = Rcpp::wrap(chopthin(w, N, eta, normalise, checks));
     return __result;
 END_RCPP
 }
