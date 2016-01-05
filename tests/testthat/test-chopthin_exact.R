@@ -31,7 +31,7 @@ test_that("Eta=Inf tests",{
     for (N in c(100,99,50,35,2,1)){
         w <- c(rexp(50),rep(0,50))
         checkbasics(chopthin(w,N=N,eta=Inf),N)
-        expect_true(sum(chopthin(w,N=N,eta=Inf,normalise=FALSE)$weights)==sum(w))
+        expect_true(abs(sum(chopthin(w,N=N,eta=Inf,normalise=FALSE)$weights)-sum(w))<1e-10)
     }
 })
 

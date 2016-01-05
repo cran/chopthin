@@ -1,6 +1,12 @@
 \name{NEWS}
 \title{News for Package 'chopthin'}
 
+\section{Changes in version 0.2.1 (2016-01-05)}{
+  \itemize{
+    \item Patched test case for Solaris.
+  }
+}
+
 \section{Changes in version 0.2 (2015-12-07)}{
   \itemize{
     \item Added correction to ensure unbiasedness of the resampler.
