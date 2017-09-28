@@ -2,4 +2,4 @@
 
 export(chopthin)
 importFrom(Rcpp,sourceCpp)
-useDynLib(chopthin)
+useDynLib(chopthin, .registration = TRUE)

@@ -1,6 +1,13 @@
 \name{NEWS}
 \title{News for Package 'chopthin'}
 
+\section{Changes in version 0.2.2 (2017-09-26)}{
+  \itemize{
+    \item Test case and patch for error caused by direct test for
+  numerical equality.
+  }
+}
+
 \section{Changes in version 0.2.1 (2016-01-05)}{
   \itemize{
     \item Patched test case for Solaris.

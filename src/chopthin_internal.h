@@ -122,17 +122,39 @@ template<bool checks> void chopthin_internal(std::vector<double>& w, unsigned in
       vu.resize(j-vu.begin());
     }
   }
+  std::vector<int>::iterator irespos=ires.begin();
+  std::vector<double>::iterator wrespos=wres.begin();
+  double wtot=0;
+
   if (afinal<0){
+    if (sl==0. &&su==0. &&(N-cm+cu==0.)){      // no action necessary, directly copy results, omitting 0s
+      for (int posv=0; posv<n; posv++){	
+	if (w[posv]>0){
+	  if (checks) if (irespos==ires.end()) chopthin_error("Internal Error: Trying to produce too many particles in special case.");
+	  *(irespos++)=posv+1;
+	  *(wrespos++)=w[posv];	  
+	  wtot+=w[posv];
+	}
+      }
+      if (checks) if (irespos!=ires.end()) chopthin_error("Internal error: Not enough particles produced in special case.");
+      if (normalise){
+	for (unsigned int count=0; count<N; count++){
+	  wres[count]*=((double)N)/wtot;
+	}
+      }
+      return;
+    }
     a=(sl+2.*su/eta)/(N-cm+cu);
-    b=a*eta/2;
+    if (eta==std::numeric_limits<double>::infinity()){
+      b=std::numeric_limits<double>::infinity();
+    }else{
+      b=a*eta/2;
+    }
   }
 
   //ensuring that total weight proportions are maintained on average
   // Start by thinning
-  std::vector<int>::iterator irespos=ires.begin();
-  std::vector<double>::iterator wrespos=wres.begin();
   double u = myrunif();
-  double wtot=0;
   for (int posv=0; posv<n; posv++){
     if (w[posv]<a){
       u-=w[posv]/a;

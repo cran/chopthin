@@ -1,5 +1,5 @@
 #### from devtools::use_rcpp()
-#' @useDynLib chopthin
+#' @useDynLib chopthin, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 
 a <- function(x){x} ## dummy to ensure that there is SOME R code;

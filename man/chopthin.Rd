@@ -37,6 +37,5 @@ chopthin(runif(10),N=1)
 }
 \references{
 A Gandy and F. D-H Lau. The chopthin algorithm for
-resampling. arXiv:1502.07532 [stat.CO], 2015
+resampling.  IEEE Transactions on Signal Processing, 64(16):4273--4281, 2016
 }
-

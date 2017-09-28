@@ -1,8 +1,8 @@
 Package: chopthin
 Type: Package
 Title: The Chopthin Resampler
-Version: 0.2.1
-Date: 2016-01-05
+Version: 0.2.2
+Date: 2017-09-26
 Author: Axel Gandy and F. Din-Houn Lau
 Maintainer: Axel Gandy <a.gandy@imperial.ac.uk>
 Description: Resampling is a standard step in particle filtering and in
@@ -13,8 +13,8 @@ License: GPL-3
 Imports: Rcpp (>= 0.11.2)
 LinkingTo: Rcpp
 Suggests: testthat
-RoxygenNote: 5.0.1
-Packaged: 2016-01-05 10:18:56 UTC; agandy
+RoxygenNote: 6.0.1
 NeedsCompilation: yes
+Packaged: 2017-09-28 08:54:19 UTC; agandy
 Repository: CRAN
-Date/Publication: 2016-01-05 21:02:04
+Date/Publication: 2017-09-28 09:00:36 UTC
